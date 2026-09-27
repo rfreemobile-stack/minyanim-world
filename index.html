@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,20 +15,22 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f5f7fa;
+      background: #f4f7fb;
       color: #1f2937;
     }
 
+    /* כותרת */
+
     header {
-      background: linear-gradient(135deg, #0d3764, #1769aa);
+      background: linear-gradient(135deg, #092d50, #1769aa);
       color: white;
       text-align: center;
-      padding: 45px 20px;
+      padding: 50px 20px 55px;
     }
 
     header h1 {
       margin: 0;
-      font-size: 42px;
+      font-size: 44px;
     }
 
     header p {
@@ -35,9 +38,11 @@
       font-size: 19px;
     }
 
+    /* חיפוש */
+
     .search-area {
       max-width: 800px;
-      margin: -25px auto 25px;
+      margin: -27px auto 25px;
       padding: 0 20px;
     }
 
@@ -48,8 +53,10 @@
       border: none;
       border-radius: 15px;
       outline: none;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+      box-shadow: 0 5px 20px rgba(0,0,0,0.16);
     }
+
+    /* תוכן */
 
     .container {
       max-width: 1050px;
@@ -57,24 +64,27 @@
       padding: 20px;
     }
 
-    .title {
+    .main-title {
       text-align: center;
       color: #0d3764;
-      margin-bottom: 25px;
+      margin: 10px 0 30px;
+      font-size: 28px;
     }
+
+    /* כרטיס */
 
     .country {
       background: white;
-      padding: 22px;
+      padding: 24px;
       margin-bottom: 20px;
-      border-radius: 16px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      border-radius: 18px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
       transition: 0.2s;
     }
 
     .country:hover {
       transform: translateY(-3px);
-      box-shadow: 0 7px 20px rgba(0,0,0,0.12);
+      box-shadow: 0 7px 22px rgba(0,0,0,0.13);
     }
 
     .country h2 {
@@ -86,13 +96,13 @@
     .city {
       font-size: 21px;
       font-weight: bold;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
     .synagogue {
-      font-size: 18px;
+      font-size: 19px;
       font-weight: bold;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
     .details {
@@ -101,45 +111,89 @@
     }
 
     .phone {
-      color: #087f23;
+      color: #138a36;
+      font-weight: bold;
+    }
+
+    /* כפתורים */
+
+    .buttons {
+      margin-top: 15px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 11px 18px;
+      border-radius: 10px;
+      text-decoration: none;
+      color: white;
       font-weight: bold;
     }
 
     .whatsapp {
-      display: inline-block;
-      margin-top: 12px;
-      padding: 10px 18px;
       background: #25D366;
-      color: white;
-      text-decoration: none;
-      border-radius: 10px;
-      font-weight: bold;
     }
 
-    .whatsapp:hover {
-      opacity: 0.9;
+    .maps {
+      background: #4285F4;
     }
 
-    .no-results {
+    /* אין תוצאות */
+
+    #noResults {
       display: none;
       text-align: center;
       background: white;
-      padding: 30px;
-      border-radius: 15px;
+      padding: 35px;
+      border-radius: 16px;
       font-size: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     }
+
+    /* הוספת מניין */
+
+    .add-section {
+      text-align: center;
+      margin: 45px 0 20px;
+      background: white;
+      padding: 30px 20px;
+      border-radius: 18px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    }
+
+    .add-section h2 {
+      color: #0d3764;
+      margin-top: 0;
+    }
+
+    .add-section p {
+      line-height: 1.7;
+    }
+
+    /* תחתית */
 
     footer {
-      margin-top: 40px;
-      background: #0d3764;
+      margin-top: 45px;
+      background: #092d50;
       color: white;
       text-align: center;
-      padding: 25px 15px;
+      padding: 28px 15px;
+      line-height: 1.8;
     }
 
+    /* טלפון */
+
     @media (max-width: 600px) {
+
+      header {
+        padding-top: 38px;
+      }
+
       header h1 {
-        font-size: 32px;
+        font-size: 33px;
       }
 
       header p {
@@ -147,149 +201,297 @@
       }
 
       .country {
-        padding: 18px;
+        padding: 19px;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+
+      .button {
+        text-align: center;
+        width: 100%;
       }
     }
+
   </style>
 </head>
+
 
 <body>
 
 <header>
+
   <h1>🌍 מניינים בעולם</h1>
-  <p>מצא מניין, בית כנסת ופרטי גבאי בכל מקום בעולם</p>
+
+  <p>
+    מוצאים מניין, בית כנסת ופרטי גבאי בכל מקום בעולם
+  </p>
+
 </header>
 
+
 <div class="search-area">
+
   <input
     type="text"
     id="search"
     placeholder="🔎 חפש מדינה, עיר או בית כנסת..."
     onkeyup="searchPlaces()"
   >
+
 </div>
+
 
 <div class="container">
 
-  <h2 class="title">בתי כנסת ומניינים</h2>
+  <h2 class="main-title">
+    🕍 בתי כנסת ומניינים
+  </h2>
+
 
   <div id="places">
 
+
+    <!-- צרפת -->
+
     <div class="country">
+
       <h2>🇫🇷 צרפת</h2>
 
-      <div class="city">📍 פריז</div>
+      <div class="city">
+        📍 פריז
+      </div>
 
       <div class="synagogue">
         🕍 בית הכנסת המרכזי
       </div>
 
       <div class="details">
+
         📌 כתובת: תעודכן בקרוב<br>
+
         👤 גבאי: יעודכן בקרוב<br>
-        📞 <span class="phone">טלפון: יעודכן בקרוב</span><br>
+
+        📞
+        <span class="phone">
+          טלפון: יעודכן בקרוב
+        </span>
+        <br>
+
         🌅 שחרית: יעודכן בקרוב<br>
+
         ☀️ מנחה: יעודכן בקרוב<br>
+
         🌙 ערבית: יעודכן בקרוב<br>
-        📅 שבת וחגים: יש לבדוק מול הגבאי
+
+        📅 שבת וחגים:
+        יש לבדוק מול הגבאי
+
       </div>
+
     </div>
 
 
+    <!-- בריטניה -->
+
     <div class="country">
+
       <h2>🇬🇧 בריטניה</h2>
 
-      <div class="city">📍 לונדון</div>
+      <div class="city">
+        📍 לונדון
+      </div>
 
       <div class="synagogue">
         🕍 בית כנסת מקומי
       </div>
 
       <div class="details">
+
         📌 כתובת: תעודכן בקרוב<br>
+
         👤 גבאי: יעודכן בקרוב<br>
-        📞 <span class="phone">טלפון: יעודכן בקרוב</span><br>
+
+        📞
+        <span class="phone">
+          טלפון: יעודכן בקרוב
+        </span>
+        <br>
+
         🌅 שחרית: יעודכן בקרוב<br>
+
         ☀️ מנחה: יעודכן בקרוב<br>
+
         🌙 ערבית: יעודכן בקרוב<br>
-        📅 שבת וחגים: יש לבדוק מול הגבאי
+
+        📅 שבת וחגים:
+        יש לבדוק מול הגבאי
+
       </div>
+
     </div>
 
 
+    <!-- ארצות הברית -->
+
     <div class="country">
+
       <h2>🇺🇸 ארצות הברית</h2>
 
-      <div class="city">📍 ניו יורק</div>
+      <div class="city">
+        📍 ניו יורק
+      </div>
 
       <div class="synagogue">
         🕍 בית כנסת מקומי
       </div>
 
       <div class="details">
+
         📌 כתובת: תעודכן בקרוב<br>
+
         👤 גבאי: יעודכן בקרוב<br>
-        📞 <span class="phone">טלפון: יעודכן בקרוב</span><br>
+
+        📞
+        <span class="phone">
+          טלפון: יעודכן בקרוב
+        </span>
+        <br>
+
         🌅 שחרית: יעודכן בקרוב<br>
+
         ☀️ מנחה: יעודכן בקרוב<br>
+
         🌙 ערבית: יעודכן בקרוב<br>
-        📅 שבת וחגים: יש לבדוק מול הגבאי
+
+        📅 שבת וחגים:
+        יש לבדוק מול הגבאי
+
       </div>
+
     </div>
 
 
+    <!-- איטליה -->
+
     <div class="country">
+
       <h2>🇮🇹 איטליה</h2>
 
-      <div class="city">📍 רומא</div>
+      <div class="city">
+        📍 רומא
+      </div>
 
       <div class="synagogue">
         🕍 בית כנסת מקומי
       </div>
 
       <div class="details">
+
         📌 כתובת: תעודכן בקרוב<br>
+
         👤 גבאי: יעודכן בקרוב<br>
-        📞 <span class="phone">טלפון: יעודכן בקרוב</span><br>
+
+        📞
+        <span class="phone">
+          טלפון: יעודכן בקרוב
+        </span>
+        <br>
+
         🌅 שחרית: יעודכן בקרוב<br>
+
         ☀️ מנחה: יעודכן בקרוב<br>
+
         🌙 ערבית: יעודכן בקרוב
+
       </div>
+
     </div>
 
+
+    <!-- שווייץ -->
 
     <div class="country">
+
       <h2>🇨🇭 שווייץ</h2>
 
-      <div class="city">📍 ציריך</div>
+      <div class="city">
+        📍 ציריך
+      </div>
 
       <div class="synagogue">
         🕍 בית כנסת מקומי
       </div>
 
       <div class="details">
+
         📌 כתובת: תעודכן בקרוב<br>
+
         👤 גבאי: יעודכן בקרוב<br>
-        📞 <span class="phone">טלפון: יעודכן בקרוב</span><br>
+
+        📞
+        <span class="phone">
+          טלפון: יעודכן בקרוב
+        </span>
+        <br>
+
         🌅 שחרית: יעודכן בקרוב<br>
+
         ☀️ מנחה: יעודכן בקרוב<br>
+
         🌙 ערבית: יעודכן בקרוב
+
       </div>
+
     </div>
 
+
   </div>
 
-  <div class="no-results" id="noResults">
-    😕 לא נמצאו תוצאות.<br>
-    נסה לחפש עיר או מדינה אחרת.
+
+  <div id="noResults">
+
+    🔍 לא מצאנו מניין בחיפוש הזה.
+
+    <br><br>
+
+    נסה לחפש מדינה, עיר או בית כנסת אחר.
+
   </div>
+
+
+  <div class="add-section">
+
+    <h2>
+      ➕ מכירים מניין שלא מופיע באתר?
+    </h2>
+
+    <p>
+      עזרו לנו להוסיף בתי כנסת ומניינים נוספים
+      כדי שיהודים מכל העולם יוכלו למצוא מניין בקלות.
+    </p>
+
+  </div>
+
 
 </div>
 
 
 <footer>
-  <strong>🌍 מניינים בעולם</strong><br><br>
-  המטרה שלנו: לעזור לכל יהודי למצוא מניין בכל מקום בעולם.
+
+  <strong>
+    🌍 מניינים בעולם
+  </strong>
+
+  <br>
+
+  למצוא תפילה בכל מקום בעולם
+
+  <br>
+
+  ❤️ עם ישראל
+
 </footer>
 
 
@@ -298,24 +500,35 @@
 function searchPlaces() {
 
   const input =
-    document.getElementById("search").value.toLowerCase();
+    document
+      .getElementById("search")
+      .value
+      .toLowerCase()
+      .trim();
 
   const places =
     document.getElementsByClassName("country");
 
   let found = false;
 
+
   for (let i = 0; i < places.length; i++) {
 
     const text =
-      places[i].innerText.toLowerCase();
+      places[i]
+        .innerText
+        .toLowerCase();
+
 
     if (text.includes(input)) {
 
       places[i].style.display = "block";
+
       found = true;
 
-    } else {
+    }
+
+    else {
 
       places[i].style.display = "none";
 
@@ -323,19 +536,29 @@ function searchPlaces() {
 
   }
 
+
   if (found) {
 
-    document.getElementById("noResults").style.display = "none";
+    document
+      .getElementById("noResults")
+      .style
+      .display = "none";
 
-  } else {
+  }
 
-    document.getElementById("noResults").style.display = "block";
+  else {
+
+    document
+      .getElementById("noResults")
+      .style
+      .display = "block";
 
   }
 
 }
 
 </script>
+
 
 </body>
 </html>
