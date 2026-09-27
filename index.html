@@ -4,7 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>מניינים בעולם</title>
 
   <style>
@@ -18,8 +17,6 @@
       background: #f4f7fb;
       color: #1f2937;
     }
-
-    /* כותרת */
 
     header {
       background: linear-gradient(135deg, #092d50, #1769aa);
@@ -38,8 +35,6 @@
       font-size: 19px;
     }
 
-    /* חיפוש */
-
     .search-area {
       max-width: 800px;
       margin: -27px auto 25px;
@@ -56,8 +51,6 @@
       box-shadow: 0 5px 20px rgba(0,0,0,0.16);
     }
 
-    /* תוכן */
-
     .container {
       max-width: 1050px;
       margin: auto;
@@ -70,8 +63,6 @@
       margin: 10px 0 30px;
       font-size: 28px;
     }
-
-    /* כרטיס */
 
     .country {
       background: white;
@@ -115,34 +106,6 @@
       font-weight: bold;
     }
 
-    /* כפתורים */
-
-    .buttons {
-      margin-top: 15px;
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 11px 18px;
-      border-radius: 10px;
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-    }
-
-    .whatsapp {
-      background: #25D366;
-    }
-
-    .maps {
-      background: #4285F4;
-    }
-
-    /* אין תוצאות */
-
     #noResults {
       display: none;
       text-align: center;
@@ -150,10 +113,7 @@
       padding: 35px;
       border-radius: 16px;
       font-size: 20px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     }
-
-    /* הוספת מניין */
 
     .add-section {
       text-align: center;
@@ -169,12 +129,6 @@
       margin-top: 0;
     }
 
-    .add-section p {
-      line-height: 1.7;
-    }
-
-    /* תחתית */
-
     footer {
       margin-top: 45px;
       background: #092d50;
@@ -184,10 +138,7 @@
       line-height: 1.8;
     }
 
-    /* טלפון */
-
     @media (max-width: 600px) {
-
       header {
         padding-top: 38px;
       }
@@ -203,362 +154,132 @@
       .country {
         padding: 19px;
       }
-
-      .buttons {
-        flex-direction: column;
-      }
-
-      .button {
-        text-align: center;
-        width: 100%;
-      }
     }
-
   </style>
 </head>
-
 
 <body>
 
 <header>
-
   <h1>🌍 מניינים בעולם</h1>
-
-  <p>
-    מוצאים מניין, בית כנסת ופרטי גבאי בכל מקום בעולם
-  </p>
-
+  <p>מוצאים מניין, בית כנסת ופרטי גבאי בכל מקום בעולם</p>
 </header>
 
-
 <div class="search-area">
-
   <input
     type="text"
     id="search"
     placeholder="🔎 חפש מדינה, עיר או בית כנסת..."
     onkeyup="searchPlaces()"
   >
-
 </div>
-
 
 <div class="container">
 
-  <h2 class="main-title">
-    🕍 בתי כנסת ומניינים
-  </h2>
-
+  <h2 class="main-title">🕍 בתי כנסת ומניינים</h2>
 
   <div id="places">
 
-
-    <!-- צרפת -->
-
     <div class="country">
-
       <h2>🇫🇷 צרפת</h2>
-
-      <div class="city">
-        📍 פריז
-      </div>
-
-      <div class="synagogue">
-        🕍 בית הכנסת המרכזי
-      </div>
+      <div class="city">📍 פריז</div>
+      <div class="synagogue">🕍 בית הכנסת המרכזי</div>
 
       <div class="details">
-
         📌 כתובת: תעודכן בקרוב<br>
-
         👤 גבאי: יעודכן בקרוב<br>
-
-        📞
-        <span class="phone">
-          טלפון: יעודכן בקרוב
-        </span>
-        <br>
-
+        📞 <span class="phone">טלפון: יעודכן בקרוב</span><br>
         🌅 שחרית: יעודכן בקרוב<br>
-
         ☀️ מנחה: יעודכן בקרוב<br>
-
         🌙 ערבית: יעודכן בקרוב<br>
-
-        📅 שבת וחגים:
-        יש לבדוק מול הגבאי
-
+        📅 שבת וחגים: יש לבדוק מול הגבאי
       </div>
-
     </div>
 
-
-    <!-- בריטניה -->
-
     <div class="country">
-
       <h2>🇬🇧 בריטניה</h2>
-
-      <div class="city">
-        📍 לונדון
-      </div>
-
-      <div class="synagogue">
-        🕍 בית כנסת מקומי
-      </div>
+      <div class="city">📍 לונדון</div>
+      <div class="synagogue">🕍 בית כנסת מקומי</div>
 
       <div class="details">
-
         📌 כתובת: תעודכן בקרוב<br>
-
         👤 גבאי: יעודכן בקרוב<br>
-
-        📞
-        <span class="phone">
-          טלפון: יעודכן בקרוב
-        </span>
-        <br>
-
+        📞 <span class="phone">טלפון: יעודכן בקרוב</span><br>
         🌅 שחרית: יעודכן בקרוב<br>
-
         ☀️ מנחה: יעודכן בקרוב<br>
-
         🌙 ערבית: יעודכן בקרוב<br>
-
-        📅 שבת וחגים:
-        יש לבדוק מול הגבאי
-
+        📅 שבת וחגים: יש לבדוק מול הגבאי
       </div>
-
     </div>
 
-
-    <!-- ארצות הברית -->
-
     <div class="country">
-
       <h2>🇺🇸 ארצות הברית</h2>
-
-      <div class="city">
-        📍 ניו יורק
-      </div>
-
-      <div class="synagogue">
-        🕍 בית כנסת מקומי
-      </div>
+      <div class="city">📍 ניו יורק</div>
+      <div class="synagogue">🕍 בית כנסת מקומי</div>
 
       <div class="details">
-
         📌 כתובת: תעודכן בקרוב<br>
-
         👤 גבאי: יעודכן בקרוב<br>
-
-        📞
-        <span class="phone">
-          טלפון: יעודכן בקרוב
-        </span>
-        <br>
-
+        📞 <span class="phone">טלפון: יעודכן בקרוב</span><br>
         🌅 שחרית: יעודכן בקרוב<br>
-
         ☀️ מנחה: יעודכן בקרוב<br>
-
         🌙 ערבית: יעודכן בקרוב<br>
-
-        📅 שבת וחגים:
-        יש לבדוק מול הגבאי
-
+        📅 שבת וחגים: יש לבדוק מול הגבאי
       </div>
-
     </div>
-
-
-    <!-- איטליה -->
-
-    <div class="country">
-
-      <h2>🇮🇹 איטליה</h2>
-
-      <div class="city">
-        📍 רומא
-      </div>
-
-      <div class="synagogue">
-        🕍 בית כנסת מקומי
-      </div>
-
-      <div class="details">
-
-        📌 כתובת: תעודכן בקרוב<br>
-
-        👤 גבאי: יעודכן בקרוב<br>
-
-        📞
-        <span class="phone">
-          טלפון: יעודכן בקרוב
-        </span>
-        <br>
-
-        🌅 שחרית: יעודכן בקרוב<br>
-
-        ☀️ מנחה: יעודכן בקרוב<br>
-
-        🌙 ערבית: יעודכן בקרוב
-
-      </div>
-
-    </div>
-
-
-    <!-- שווייץ -->
-
-    <div class="country">
-
-      <h2>🇨🇭 שווייץ</h2>
-
-      <div class="city">
-        📍 ציריך
-      </div>
-
-      <div class="synagogue">
-        🕍 בית כנסת מקומי
-      </div>
-
-      <div class="details">
-
-        📌 כתובת: תעודכן בקרוב<br>
-
-        👤 גבאי: יעודכן בקרוב<br>
-
-        📞
-        <span class="phone">
-          טלפון: יעודכן בקרוב
-        </span>
-        <br>
-
-        🌅 שחרית: יעודכן בקרוב<br>
-
-        ☀️ מנחה: יעודכן בקרוב<br>
-
-        🌙 ערבית: יעודכן בקרוב
-
-      </div>
-
-    </div>
-
 
   </div>
-
 
   <div id="noResults">
-
-    🔍 לא מצאנו מניין בחיפוש הזה.
-
-    <br><br>
-
+    🔍 לא מצאנו מניין בחיפוש הזה.<br><br>
     נסה לחפש מדינה, עיר או בית כנסת אחר.
-
   </div>
 
-
   <div class="add-section">
-
-    <h2>
-      ➕ מכירים מניין שלא מופיע באתר?
-    </h2>
-
+    <h2>➕ מכירים מניין שלא מופיע באתר?</h2>
     <p>
       עזרו לנו להוסיף בתי כנסת ומניינים נוספים
       כדי שיהודים מכל העולם יוכלו למצוא מניין בקלות.
     </p>
-
   </div>
-
 
 </div>
 
-
 <footer>
-
-  <strong>
-    🌍 מניינים בעולם
-  </strong>
-
-  <br>
-
-  למצוא תפילה בכל מקום בעולם
-
-  <br>
-
+  <strong>🌍 מניינים בעולם</strong><br>
+  למצוא תפילה בכל מקום בעולם<br>
   ❤️ עם ישראל
-
 </footer>
 
-
 <script>
-
 function searchPlaces() {
 
-  const input =
-    document
-      .getElementById("search")
-      .value
-      .toLowerCase()
-      .trim();
+  const input = document
+    .getElementById("search")
+    .value
+    .toLowerCase()
+    .trim();
 
-  const places =
-    document.getElementsByClassName("country");
+  const places = document.getElementsByClassName("country");
 
   let found = false;
 
-
   for (let i = 0; i < places.length; i++) {
 
-    const text =
-      places[i]
-        .innerText
-        .toLowerCase();
-
+    const text = places[i].innerText.toLowerCase();
 
     if (text.includes(input)) {
-
       places[i].style.display = "block";
-
       found = true;
-
-    }
-
-    else {
-
+    } else {
       places[i].style.display = "none";
-
     }
-
   }
 
-
-  if (found) {
-
-    document
-      .getElementById("noResults")
-      .style
-      .display = "none";
-
-  }
-
-  else {
-
-    document
-      .getElementById("noResults")
-      .style
-      .display = "block";
-
-  }
-
+  document.getElementById("noResults").style.display =
+    found ? "none" : "block";
 }
-
 </script>
-
 
 </body>
 </html>
